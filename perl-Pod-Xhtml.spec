@@ -15,6 +15,7 @@ BuildRequires: perl(Pod::ParseUtils)
 BuildRequires: perl(Pod::Parser)
 BuildRequires: perl(Test::Assertions::TestScript)
 BuildRequires: perl(Test::More)
+BuildRequires: perl(URI::Escape)
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
