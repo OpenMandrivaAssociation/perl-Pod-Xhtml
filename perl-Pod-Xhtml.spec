@@ -10,12 +10,14 @@ License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.gz
+Patch0:     Pod-Xhtml-1.59-uri_escape.patch
 
 BuildRequires: perl(Pod::ParseUtils)
 BuildRequires: perl(Pod::Parser)
 BuildRequires: perl(Test::Assertions::TestScript)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(URI::Escape)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -31,14 +33,15 @@ http://foo.bar/baz/ manpage
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
+# https://rt.cpan.org/Public/Bug/Display.html?id=56324
+%patch0 -p1 -b .uri
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+%make
 
 %check
-%{make} test
+%make test
 
 %install
 rm -rf %buildroot
