@@ -1,5 +1,5 @@
 %define upstream_name    Pod-Xhtml
-%define upstream_version 1.59
+%define upstream_version 1.61
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
