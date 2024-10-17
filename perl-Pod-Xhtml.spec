@@ -8,7 +8,7 @@ Release:	5
 Summary:	Allow off-page links in POD to point to a URL
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.gz
 Patch0:		Pod-Xhtml-1.59-uri_escape.patch
 
