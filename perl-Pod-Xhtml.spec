@@ -12,6 +12,7 @@ Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.gz
 Patch0:		Pod-Xhtml-1.59-uri_escape.patch
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(Pod::ParseUtils)
 BuildRequires:	perl(Pod::Parser)
