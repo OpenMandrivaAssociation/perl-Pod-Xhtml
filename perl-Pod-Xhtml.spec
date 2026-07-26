@@ -1,15 +1,13 @@
 %define upstream_name    Pod-Xhtml
-%define upstream_version 1.61
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	1.61
+Release:	6
 
 Summary:	Allow off-page links in POD to point to a URL
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{version}.tar.gz
 Patch0:		Pod-Xhtml-1.59-uri_escape.patch
 
 BuildRequires:	make
@@ -33,7 +31,7 @@ sit amet consectueur adipscing elit. Sed diam the nomumny manpage. the
 http://foo.bar/baz/ manpage
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 # https://rt.cpan.org/Public/Bug/Display.html?id=56324
 %patch0 -p1 -b .uri
 
